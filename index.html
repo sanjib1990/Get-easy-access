@@ -21,7 +21,6 @@
       min-height: 100vh;
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
     }
 
     @keyframes gradientBG {
@@ -32,27 +31,28 @@
 
     header {
       text-align: center;
-      padding: 1rem 1rem 0.5rem;
-      font-size: 1.8rem;
+      padding: 1.5rem 1rem 1rem;
+      font-size: 2rem;
       font-weight: bold;
+      color: #fff;
       background-color: rgba(0, 0, 0, 0.3);
       backdrop-filter: blur(4px);
     }
 
-    .logo-container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-top: 1rem;
+    .highlight-banner {
+      background: #fff;
+      text-align: center;
+      padding: 1rem;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+      z-index: 10;
     }
 
-    .logo-container a img {
-      height: 60px;
-      margin-bottom: 0.5rem;
-      transition: transform 0.3s;
+    .highlight-banner a img {
+      height: 80px;
+      transition: transform 0.3s ease;
     }
 
-    .logo-container a img:hover {
+    .highlight-banner a img:hover {
       transform: scale(1.1);
     }
 
@@ -65,16 +65,18 @@
     }
 
     .card {
-      background-color: rgba(255, 255, 255, 0.1);
+      background-color: rgba(255, 255, 255, 0.2);
       border-radius: 1rem;
       overflow: hidden;
-      width: 250px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-      transition: transform 0.3s;
+      width: 260px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+      transition: transform 0.4s, box-shadow 0.4s;
+      backdrop-filter: blur(8px);
     }
 
     .card:hover {
-      transform: scale(1.05);
+      transform: translateY(-10px) scale(1.05);
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.6);
     }
 
     .card img {
@@ -86,6 +88,11 @@
     .card-body {
       padding: 1rem;
       text-align: center;
+      color: #fff;
+    }
+
+    .card-body h3 {
+      margin-bottom: 0.5rem;
     }
 
     .card-body a {
@@ -96,6 +103,28 @@
       color: white;
       text-decoration: none;
       border-radius: 0.5rem;
+      font-weight: bold;
+    }
+
+    .features-section {
+      text-align: center;
+      padding: 2rem;
+      background-color: rgba(0, 0, 0, 0.2);
+    }
+
+    .features-section h2 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+    }
+
+    .features-section ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .features-section ul li {
+      margin: 0.5rem 0;
+      font-size: 1.1rem;
     }
 
     footer {
@@ -112,15 +141,15 @@
   </style>
 </head>
 <body>
-  <header>
-    Get your Credit Cards & Personal Loan @ few clicks
-  </header>
-
-  <div class="logo-container">
+  <div class="highlight-banner">
     <a href="https://www.banksathi.com/my-profile/my-offer" target="_blank">
       <img src="https://assets-global.website-files.com/63a40db14b45288424c48f84/63a5a768a47c9f6fbd9e730a_BankSathi%20logo.png" alt="Bank Sathi Logo">
     </a>
   </div>
+
+  <header>
+    Get your Credit Cards & Personal Loan @ few clicks
+  </header>
 
   <div class="cards-container">
     <div class="card">
@@ -144,6 +173,16 @@
         <a href="YOUR_AFFILIATE_LINK_HERE" target="_blank">Apply Now</a>
       </div>
     </div>
+  </div>
+
+  <div class="features-section">
+    <h2>Why Choose Us?</h2>
+    <ul>
+      <li>✨ Quick Online Application Process</li>
+      <li>⏳ Instant Approval Updates</li>
+      <li>💰 Multiple Credit Card Options</li>
+      <li>🚀 Secure & Fast Processing</li>
+    </ul>
   </div>
 
   <footer>
